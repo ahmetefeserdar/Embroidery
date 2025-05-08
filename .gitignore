@@ -1,0 +1,21 @@
+# Development / system files
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
+
+# Output & generated content
+output/
+**/output/
+figures/
+**/figures/
+examples/output_previews/
+examples/data/*.pickle
+
+# (Optional) Ignore Jupyter Notebook checkpoints
+**/.ipynb_checkpoints/
+
+# (Optional) Ignore logs or cache
+*.log
+*.tmp
+.cache/
