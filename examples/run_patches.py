@@ -70,10 +70,10 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 
 # %%
 # --- Script Configuration ---
-task_name_base = "bird2"  # << SET YOUR BASE TASK NAME HERE
+task_name_base = "2color"  # << SET YOUR BASE TASK NAME HERE
 source_data_folder = Path("data")
 output_base_folder = Path("output")
-SKIP_LEVEL_0 = True # Set to True to skip background/Level 0 embroidery
+SKIP_LEVEL_0 = False # Set to True to skip background/Level 0 embroidery
 
 # Create output folders
 merged_output_folder = output_base_folder / f"{task_name_base}_merged"
@@ -130,6 +130,7 @@ if IMG_W <= 0 or IMG_H <= 0:
 
 # --- Find level JSON files ---
 level_json_files = sorted(list(source_data_folder.glob(f"{task_name_base}_labelme_L*.json")))
+#level_json_files = sorted(list(source_data_folder.glob(f"{task_name_base}_kmeans_L*.json")))
 if not level_json_files: logging.error(f"No level JSON files found for '{task_name_base}'."); sys.exit(1)
 logging.info(f"Found {len(level_json_files)} level JSON files: {[f.name for f in level_json_files]}")
 

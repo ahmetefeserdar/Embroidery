@@ -7,7 +7,7 @@ from matplotlib.patches import Polygon
 from matplotlib.collections import PatchCollection
 import matplotlib.patheffects as pe
 
-json_path = Path("data/bird2_labelme_L1.json")   # ← change if needed
+json_path = Path("data/sky2_labelme_L0.json")   # ← change if needed
 linewidth  = 1.5                                  # outline thickness
 
 # ---------- read polygons ----------------------------------------------------

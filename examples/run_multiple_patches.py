@@ -41,7 +41,7 @@ if (ipython_instance := get_ipython()) is not None:
 # %%
 task_name = f"sky2"
 image_fn = f"data/{task_name}.jpg"
-json_fn = f"data/{task_name}_labelme_L0.json"
+json_fn = f"data/{task_name}_kmeans_L0.json"
 
 
 image = img_as_float(plt.imread(image_fn))[:, :, :3]
